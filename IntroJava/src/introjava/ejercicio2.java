@@ -23,6 +23,16 @@ public class ejercicio2 {
         nombre = nombre_i.next();
         System.out.println("Tu nombre es " + nombre);
         
+        int a, b, c;
+        System.out.println("ingrese a");
+        Scanner a_i = new Scanner(System.in);
+        a = a_i.nextInt();
+        System.out.println("ingrese b");
+        Scanner b_i = new Scanner(System.in);
+        b = b_i.nextInt();
+        c = a % b;
+        System.out.println(c);
+        
         
     }
     
