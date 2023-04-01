@@ -5,6 +5,8 @@
  */
 package Guia4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Edu
@@ -20,8 +22,50 @@ public class G4_ejercicio4 {
  
     public static void main(String[] args) {
     
+        System.out.println("Ingrese un numero");
+        Scanner num_i = new Scanner(System.in);
+        int num = num_i.nextInt();
         
+        boolean retorno = primo(num);
+        
+        System.out.println("Es " + retorno + " que el numero " + num + " es primo");
         
     }
     
+    //aca armo la funcion, tiene que retonar una TRUE o FALSE
+    
+    public static boolean primo(int num)   {
+   
+    int contador = 0;
+    int contador1 = 0;
+    int contador2 = 0;
+    boolean valida;
+    int a;
+    
+        for (int i = 1; i <= num; i++)  {
+            
+               
+                
+            if (num%i == 0)            {
+                contador++; 
+            }
+          
+            
+            
+        }
+        
+        // contador = contador1 + contador2;
+        
+        if(contador == 2)
+        {
+            valida = true;
+        }
+        else
+        {
+            valida = false;
+        }
+        
+        return valida;
+    }
+   
 }
