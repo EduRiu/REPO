@@ -21,7 +21,7 @@ public class ejercicio5 {
     public static void main(String[] args) {
         System.out.println("Ingrese un numero entero");
         Scanner num_i = new Scanner(System.in);
-        double num = num_i.nextDouble();
+        int num = num_i.nextInt();
         
         System.out.println("el doble del " + num + " es " + num*2);
         System.out.println("el triple del " + num + " es " + num*3);
