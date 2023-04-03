@@ -35,8 +35,7 @@ public class G4_ejercicio4 {
     public static boolean primo(int num) {
 
         int contador = 0;
-        int contador1 = 0;
-        int contador2 = 0;
+        
         boolean valida;
        
 
