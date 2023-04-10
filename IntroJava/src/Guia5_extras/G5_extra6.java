@@ -5,6 +5,7 @@
  */
 package Guia5_extras;
 
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -147,11 +148,11 @@ public class G5_extra6 {
            
             do {
                 
-                System.out.println("palabra " + palabra[a]);
+               // System.out.println("palabra " + palabra[a]);
                 matriz[x][y] = palabra[a].substring(c, d);
                 y++;
-                System.out.println(x + " " + y);
-                System.out.println(" ");
+               //System.out.println(x + " " + y);
+               //System.out.println(" ");
                // System.out.println("i" + i);
                 contador++;
                // System.out.println("contador" + contador);
