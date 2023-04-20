@@ -65,20 +65,33 @@ negativo después de realizar una transacción de retiro.
        Scanner leer = new Scanner(System.in);
        
        double retiro;
-       double resto;
+       boolean salir = true;
+       
+       
+       do{
        System.out.println("cuanto dinero desea retirar");
        retiro = leer.nextDouble();
        
        if (retiro > saldo) {
            System.out.println("No puede retirar esa cantidad");
            System.out.println("Saldo insuficiente");
+           break;
        }
        else
        {
-          resto = saldo-retiro;
-           System.out.println("Usuario " + titular + " su saldo es " + resto);
+           saldo = saldo-retiro;
+           System.out.println("Usuario " + titular + " su saldo es " + saldo);
           
        }
+           System.out.println(" desea retirar nuevamente");
+           System.out.println("N --> NO");
+           System.out.println("S --> SI");
+           if ("N".equals(leer.next())) {
+               salir = false;
+           }
+           
+           
+       } while(salir);
        
        
        
