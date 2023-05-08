@@ -19,8 +19,22 @@ public class Main {
     public static void main(String[] args) {
        
         NIFServicios usuario = new NIFServicios();
+        NIFServicios usuario1 = new NIFServicios();
+        NIFServicios usuario2 = new NIFServicios();
         
+        usuario.crearNif();
         usuario.mostrarNif();
+        
+        usuario1.crearNif();
+        usuario1.mostrarNif();
+        
+        System.out.println("mostrar");
+        usuario.mostrarNif();
+        usuario1.mostrarNif();
+        
+      
+      
+       
         
         
     }

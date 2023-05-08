@@ -18,6 +18,15 @@ public class GUIA83 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
+       PersonaServicio cargar = new PersonaServicio();
+       
+       cargar.cargarPersona();
+               
+        
+        
+        /*
         Scanner leer = new Scanner(System.in);
         int n;
         System.out.println("cuantos personas creas");
@@ -70,8 +79,8 @@ public class GUIA83 {
         
         System.out.println("hay" + contadormayor++ + " mayores");
         
-        
-        
+       */ 
+        // ------------------------------------------------------ hasta aca anda
         /*
         PersonaServicio persona = new PersonaServicio();
         persona.crearPersona();

@@ -19,7 +19,7 @@ public class GUIA8_1 {
     public static void main(String[] args) {
        
     CuentaBancariaServicio cuenta100 = new CuentaBancariaServicio();
-    
+    CuentaBancariaServicio cuenta101 = new CuentaBancariaServicio();
          
         
         
@@ -30,9 +30,16 @@ public class GUIA8_1 {
     cuenta100.consultaSaldo();
     cuenta100.consultaDatos();
             
+     
+    cuenta101.crearCuenta();
+    cuenta101.ingresarSaldo();
+    //cuenta101.retirarSaldo();
+    //cuenta101.extraccionRapida();
+    //cuenta101.consultaSaldo();
+    //cuenta101.consultaDatos();
         
-        
-        
+     cuenta100.consultaDatos();    
+     
     }
     
 }

@@ -37,6 +37,11 @@ public class NIF {
     public void setVerificador(String verificador) {
         this.verificador = verificador;
     }
+
+    @Override
+    public String toString() {
+        return "NIF{" + "DNI=" + DNI + ", verificador=" + verificador + '}';
+    }
     
     
     

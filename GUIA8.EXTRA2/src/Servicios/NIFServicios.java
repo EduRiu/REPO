@@ -25,14 +25,16 @@ public class NIFServicios {
 
         String array[] = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
 
-        long resto;
+       int resto;
 
         System.out.println("Ingrese el DNI");
         usuario.setDNI(leer.nextLong());
 
-        resto = usuario.getDNI() % 23;
+        resto = (int) usuario.getDNI() % 23;
 
-        for (int i = 0; i < array.length; i++) {
+        usuario.setVerificador(array[resto]);
+        
+       /* for (int i = 0; i < array.length; i++) {
 
             if (i == resto) {
 
@@ -41,16 +43,15 @@ public class NIFServicios {
             }
 
         }
-
+        */
     }
 
     /*
     Método mostrar(): que nos permita mostrar el NIF 
    (ocho dígitos, un guion y la letra en mayúscula; por ejemplo: 00395469-F).
      */
+       
     public void mostrarNif() {
-
-        crearNif();
 
         System.out.println("el NIF para el DNI:" + usuario.getDNI() + " - " + usuario.getVerificador());
 
@@ -82,4 +83,13 @@ public class NIFServicios {
         array[21] = "T";
         array[22] = "T";
      */
+
+    @Override
+    public String toString() {
+        return "NIFServicios{" + "leer=" + leer + ", usuario=" + usuario + '}';
+    }
+    
+    
+    
+    
 }
