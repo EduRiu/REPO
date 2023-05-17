@@ -45,6 +45,7 @@ public class AlumnoServicios {
     //ESTE VECTOR CREA OBJETOS TIPO "FOR"
     
     public void resumen() {
+        
         System.out.println("cuantos alumnos va a ingresar?");
         
         int t = leer.nextInt();
@@ -76,6 +77,7 @@ public class AlumnoServicios {
             if (promedio <= carga[i].promedioNota()) {
                 contador++;
             }
+            System.out.println(contador);
         }
         //ACA ARMO LA ESTRUCTURA PARA EL VECTOR DE NOMBRES
         String[] nombre = new String[contador];
@@ -84,6 +86,7 @@ public class AlumnoServicios {
         for (int i = 0; i < carga.length; i++) {
 
             if (promedio <= carga[i].promedioNota()) {
+               
                 nombre[a] = carga[i].alumnoA();
 
             }

@@ -21,11 +21,10 @@ public class Main {
     public static void main(String[] args) {
        
         Curso alumnos = new Curso();
-        
         CursoServicios objeto = new CursoServicios();
       
         objeto.crearCurso(alumnos);
-        System.out.println("Por el curso" + alumnos.getNombreCurso() +  "cobra: " + objeto.calcularGanancias(alumnos) + " pesos");  
+        System.out.println("Por el curso " + alumnos.getNombreCurso() +  "cobra: " + objeto.calcularGanancias(alumnos) + " pesos");  
       
         System.out.println(" Los alumnos que asisten son" + Arrays.toString(alumnos.getAlumnos()));
         
