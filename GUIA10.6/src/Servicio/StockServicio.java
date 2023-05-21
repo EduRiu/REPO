@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Edu
@@ -19,10 +20,11 @@ import java.util.Scanner;
 public class StockServicio {
 
     private Scanner leer;
+   
 
     public StockServicio() {
         this.leer = new Scanner(System.in).useDelimiter("\n");
-
+      
     }
 
     public void cargaInventario(HashMap<String, Integer> stock) {
@@ -117,16 +119,19 @@ public class StockServicio {
         }
     }
 
-    //funciona la lista si la cantidad de productos es distinta.
+    
     public void compraProducto(HashMap<String, Integer> stock) {
 
+        ArrayList<Stock> compraCompra = new ArrayList<>();
+        
         int suma = 0;
         Integer cantidad = 0;
         int total = 0;
 
-        HashMap<Integer, String> resumen = new HashMap();
+       // HashMap<Integer, String> resumen = new HashMap();
 
         ArrayList<String> listaCompra = new ArrayList();
+       
 
         do {
            
@@ -135,7 +140,10 @@ public class StockServicio {
                 System.out.println("Cantidad de productos");
                 cantidad = leer.nextInt();
 
-                resumen.put(cantidad, compra);
+         //       resumen.put(cantidad, compra);
+         
+                compraCompra.add(new Stock(cantidad, compra));
+         
 
                 for (Map.Entry<String, Integer> entry : stock.entrySet()) {
                     String key = entry.getKey();
@@ -159,6 +167,7 @@ public class StockServicio {
 
         System.out.println("LISTADO DE PRODUCTOS: ");
         int sumarProducto = 0;
+       /*
         for (Map.Entry<Integer, String> entry : resumen.entrySet()) {
             Integer key = entry.getKey();
             String value = entry.getValue();
@@ -166,7 +175,16 @@ public class StockServicio {
             sumarProducto += key;
             System.out.println("Cantidad: ---> " + key + " Producto: ---->" + value);
         }
-        System.out.println("suma total: $ " + suma + "la cantidad de productos es: " + sumarProducto);
+        */
+        
+       Iterator<Stock> mostrarLista = compraCompra.iterator();
+        while (mostrarLista.hasNext()) {
+               Stock next = mostrarLista.next();
+            sumarProducto+=next.getCantidadArticulo();
+            System.out.println("Cantidad: " + next.getCantidadArticulo() + " articulo: " + next.getArticulo());
+        }
+       
+        System.out.println("suma total: $ " + suma + " la cantidad de productos es: " + sumarProducto);
     }
 
 }

@@ -22,7 +22,10 @@ public class Stock {
     public Stock(String producto, Integer precio) {
         this.producto = producto;
         this.precio = precio;
+        
     }
+
+
 
     public String getProducto() {
         return producto;
@@ -74,8 +77,31 @@ public class Stock {
         return "Stock{" + "producto=" + producto + ", precio=" + precio + '}';
     }
     
+    private Integer cantidadArticulo;
+    private String articulo;
 
-   
+    public Stock(Integer cantidadArticulo, String articulo) {
+        this.cantidadArticulo = cantidadArticulo;
+        this.articulo = articulo;
+    }
+
+    public Integer getCantidadArticulo() {
+        return cantidadArticulo;
+    }
+
+    public void setCantidadArticulo(Integer cantidadArticulo) {
+        this.cantidadArticulo = cantidadArticulo;
+    }
+
+    public String getArticulo() {
+        return articulo;
+    }
+
+    public void setArticulo(String articulo) {
+        this.articulo = articulo;
+    }
+    
+    
     
     
 }

@@ -31,40 +31,45 @@ public class Main {
         HashMap<String, Integer> stock = new HashMap();
 
         StockServicio main = new StockServicio();
-
+ do {
         System.out.println("MENU MERCADITO 'CHIQUITO' ");
         System.out.println("1 - cargar inventario");
         System.out.println("2 - mostrar inventario");
         System.out.println("3 - ingresar a inventario");
         System.out.println("4 - eliminar inventario");
         System.out.println("5 - modificar inventario");
+        System.out.println("6 - compra inventario");
 
         int opcion = leer.nextInt();
-
-        switch (opcion) {
-            case 1:
-                main.cargaInventario(stock);
-              // main.mostrarProducto(stock);
-              // main.borrarProducto(stock);
-              // main.modifcarProducto(stock);
-                main.compraProducto(stock);
+       
+            switch (opcion) {
+                case 1:
+                    main.cargaInventario(stock);
+                   
+                    break;
+                case 2:
+                    main.mostrarProducto(stock);
+                    break;
+                case 3:
+                    main.ingresarProducto(stock);
+                    break;
+                case 4:
+                    main.borrarProducto(stock);
+                    break;
+                case 5:
+                    main.modifcarProducto(stock);
+                    break;
+                case 6:
+                    main.compraProducto(stock);
+                    break;    
+                default:
+                    System.out.println("no hubo una opcion valida");
+            }
+            System.out.println("desea selecionar otra opcion) s/n");
+            if (leer.next().equalsIgnoreCase("n")) {
                 break;
-            case 2:
-                main.mostrarProducto(stock);
-                break;
-            case 3:
-                main.ingresarProducto(stock);
-                break;
-            case 4:
-                main.borrarProducto(stock);
-                break;
-            case 5:
-                main.modifcarProducto(stock);
-                break;
-           default:
-               System.out.println("no hubo una opcion valida");
-        }
+            }
+        } while (true);
 
     }
-
 }
