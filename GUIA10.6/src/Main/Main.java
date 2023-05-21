@@ -44,7 +44,10 @@ public class Main {
         switch (opcion) {
             case 1:
                 main.cargaInventario(stock);
-                
+              // main.mostrarProducto(stock);
+              // main.borrarProducto(stock);
+              // main.modifcarProducto(stock);
+                main.compraProducto(stock);
                 break;
             case 2:
                 main.mostrarProducto(stock);

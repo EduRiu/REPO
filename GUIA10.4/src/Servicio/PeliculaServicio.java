@@ -23,7 +23,7 @@ public class PeliculaServicio {
     
 
     public PeliculaServicio() {
-        ;
+        
         this.leer = new Scanner(System.in).useDelimiter("\n");
     }
 
